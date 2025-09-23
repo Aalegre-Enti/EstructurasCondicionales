@@ -1,17 +1,28 @@
-// e01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e03.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-int number;
+int numberA;
+int numberB;
 
 int main()
 {
-	std::cout << "Enter a number: ";
-	std::cin >> number;
-	if(number % 2 == 0)
-		std::cout << number << " is even.\n";
-	else
-		std::cout << number << " is odd.\n";
+	std::cout << "Enter the first number:\n";
+	std::cin >> numberA;
+	std::cout << "Enter the second number:\n";
+	std::cin >> numberB;
+    if (numberB == 0) {
+        std::cout << "You can't divide by 0.\n";
+    }
+    else {
+        if (numberA % numberB == 0) {
+            std::cout << numberA << " is multiple of " << numberB << "\n";
+        }
+        else {
+            std::cout << numberA << " isn't multiple of " << numberB << "\n";
+        }
+    }
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -1,17 +1,27 @@
-// e01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e06.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-int number;
+int a, b, c;
 
 int main()
 {
-	std::cout << "Enter a number: ";
-	std::cin >> number;
-	if(number % 2 == 0)
-		std::cout << number << " is even.\n";
-	else
-		std::cout << number << " is odd.\n";
+    std::cout << "Enter the first side: ";
+    std::cin >> a;
+    std::cout << "Enter the second side: ";
+    std::cin >> b;
+    std::cout << "Enter the third side: ";
+    std::cin >> c;
+
+    if (a == b && b == c) {
+        std::cout << "The triangle is equilateral.\n";
+    }
+    else if (a == b || a == c || b == c) {
+        std::cout << "The triangle is isosceles.\n";
+    }
+    else {
+        std::cout << "The triangle is scalene.\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

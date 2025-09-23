@@ -1,17 +1,20 @@
-// e01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e04.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-int number;
+int year;
 
 int main()
 {
-	std::cout << "Enter a number: ";
-	std::cin >> number;
-	if(number % 2 == 0)
-		std::cout << number << " is even.\n";
-	else
-		std::cout << number << " is odd.\n";
+    std::cout << "Enter a year: ";
+    std::cin >> year;
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        std::cout << year << " is a leap year.\n";
+    }
+    else {
+        std::cout << year << " is not a leap year.\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -1,4 +1,4 @@
-// e01.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e02.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -8,10 +8,12 @@ int main()
 {
 	std::cout << "Enter a number: ";
 	std::cin >> number;
-	if(number % 2 == 0)
-		std::cout << number << " is even.\n";
+	if(number < 0)
+		std::cout << number << " is negative.\n";
+	else if(number > 0)
+		std::cout << number << " is positive.\n";
 	else
-		std::cout << number << " is odd.\n";
+		std::cout << "You entered 0.\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
