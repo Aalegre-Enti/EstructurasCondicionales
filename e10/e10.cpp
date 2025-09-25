@@ -1,39 +1,30 @@
-// e07.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e10.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-int month;
+
+bool toggleA;
+bool toggleB;
+bool toggleC;
 
 int main()
 {
-    std::cout << "Enter a number from 1 to 12: ";
-    std::cin >> month;
-
-    switch (month)
-    {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        std::cout << "This month has 31 days.\n";
-        break;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        std::cout << "This month has 30 days.\n";
-        break;
-    case 2:
-        std::cout << "This month has 28 or 29 days (leap year).\n";
-        break;
-
-    default:
-        std::cout << "Invalid number. Please enter between 1 and 12.\n";
-        break;
-    }
+	std::cout << "Toggle switches A, B and C.\n";
+	std::cout << "Switch A: ";
+	std::cin >> toggleA;
+	std::cout << "Switch B: ";
+	std::cin >> toggleB;
+	std::cout << "Switch C: ";
+	std::cin >> toggleC;
+	if (toggleA && toggleB && !toggleC) {
+		std::cout << "Light is ON.\n";
+	}
+	else if (!toggleA && toggleB && toggleC) {
+		std::cout << "Light is ON.\n";
+	}
+	else {
+		std::cout << "Light is OFF.\n";
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

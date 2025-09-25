@@ -1,39 +1,23 @@
-// e07.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// e08.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-int month;
+int dniNumber;
+char dniLetter;
 
 int main()
 {
-    std::cout << "Enter a number from 1 to 12: ";
-    std::cin >> month;
-
-    switch (month)
-    {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        std::cout << "This month has 31 days.\n";
-        break;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        std::cout << "This month has 30 days.\n";
-        break;
-    case 2:
-        std::cout << "This month has 28 or 29 days (leap year).\n";
-        break;
-
-    default:
-        std::cout << "Invalid number. Please enter between 1 and 12.\n";
-        break;
-    }
+	std::cout << "Enter your DNI number (without letter): ";
+	std::cin >> dniNumber;
+	char dniLetterTest = "TRWAGMYFPDXBNJZSQVHLCKE"[dniNumber % 23];
+	std::cout << "Enter your DNI letter: ";
+	std::cin >> dniLetter;
+	if (dniLetterTest == dniLetter) {
+		std::cout << "The letter is correct.\n";
+	}
+	else {
+		std::cout << "The letter is incorrect. The correct letter is: " << dniLetterTest << "\n";
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
